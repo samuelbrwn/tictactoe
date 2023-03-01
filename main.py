@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter import messagebox
 
+#The code for the GUI comes from stack overflow: https://stackoverflow.com/questions/7591294/how-to-create-a-self-resizing-grid-of-buttons-in-tkinter
+#the answer was provided by Gabriel Staples.
 root = Tk()
 root.title("TIC-TAC-TOE")
 root.geometry("500x500")
@@ -17,6 +19,6 @@ for row_index in range(3):
     for col_index in range(3):
         Grid.columnconfigure(frame, col_index, weight=1)
         btn = Button(frame) #create a button inside frame 
-        btn.grid(row=row_index, column=col_index, sticky=N+S+E+W) 
+        btn.grid(row=row_index, column=col_index, sticky=N+S+E+W)  
 
 root.mainloop()
